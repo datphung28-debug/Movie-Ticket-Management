@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieticketbookingmanagement.FXMLDocumentController">
+    <children>
+      <AnchorPane fx:id="signIn_form" layoutX="252.0" layoutY="155.0" prefHeight="528.0" prefWidth="772.0" styleClass="bg-form" stylesheets="@designLogin.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <ImageView fitHeight="110.0" fitWidth="112.0" layoutX="328.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="299.0" layoutY="170.0" prefHeight="74.0" prefWidth="184.0" text="ĐĂNG NHẬP" textFill="#ac9d9d">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signIn_username" layoutX="280.0" layoutY="246.0" onAction="#signin" opacity="0.4" prefHeight="30.0" prefWidth="206.0" promptText="Username" styleClass="textfield" stylesheets="@designLogin.css" />
+            <PasswordField fx:id="signIn_password" layoutX="280.0" layoutY="292.0" onAction="#signin" opacity="0.4" prefHeight="30.0" prefWidth="206.0" promptText="Password" styleClass="textfield" stylesheets="@designLogin.css" />
+            <Hyperlink fx:id="signIn_createAccount" layoutX="333.0" layoutY="423.0" onAction="#switchForm" stylesheets="@designLogin.css" text="Tạo tài khoản mới?" />
+            <Button fx:id="signIn_minimize" layoutX="658.0" layoutY="1.0" mnemonicParsing="false" onAction="#signIn_minimize" prefHeight="27.0" prefWidth="54.0" styleClass="minimize" stylesheets="@designLogin.css" text="➖" />
+            <Button fx:id="signIn_close" layoutX="713.0" layoutY="1.0" mnemonicParsing="false" onAction="#signIn_close" prefHeight="27.0" prefWidth="54.0" styleClass="close" stylesheets="@designLogin.css" text="✖" />
+            <Button fx:id="signIn_loginBtn" layoutX="342.0" layoutY="358.0" mnemonicParsing="false" onAction="#signin" styleClass="login-btn" stylesheets="@designLogin.css" text="Đăng Nhập" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signUp_form" prefHeight="528.0" prefWidth="772.0" styleClass="bg-form" stylesheets="@designLogin.css" visible="false">
+         <children>
+            <ImageView fitHeight="110.0" fitWidth="112.0" layoutX="323.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="314.0" layoutY="188.0" prefHeight="74.0" prefWidth="184.0" text="ĐĂNG KÝ" textFill="#ac9d9d">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signUp_email" layoutX="277.0" layoutY="254.0" opacity="0.4" prefHeight="30.0" prefWidth="206.0" promptText="Email" styleClass="textfield" stylesheets="@designLogin.css" />
+            <PasswordField fx:id="signUp_password" layoutX="276.0" layoutY="358.0" opacity="0.4" prefHeight="30.0" prefWidth="206.0" promptText="Password" styleClass="textfield" stylesheets="@designLogin.css" />
+            <TextField fx:id="signUp_username" layoutX="275.0" layoutY="307.0" opacity="0.4" prefHeight="30.0" prefWidth="206.0" promptText="Username" styleClass="textfield" stylesheets="@designLogin.css" />
+            <Hyperlink fx:id="signUp_alreadyHaveAccount" layoutX="331.0" layoutY="457.0" onAction="#switchForm" stylesheets="@designLogin.css" text="Đã có tài khoản !!" />
+            <Button fx:id="signUp_close" layoutX="716.0" layoutY="2.0" mnemonicParsing="false" onAction="#signUp_close" prefHeight="27.0" prefWidth="54.0" styleClass="close" stylesheets="@designLogin.css" text="✖" />
+            <Button fx:id="signUp_minimize" layoutX="659.0" layoutY="2.0" mnemonicParsing="false" onAction="#signUp_minimize" prefHeight="27.0" prefWidth="54.0" styleClass="minimize" stylesheets="@designLogin.css" text="➖" />
+            <Button fx:id="signUp_btn" layoutX="339.0" layoutY="410.0" mnemonicParsing="false" onAction="#signup" prefHeight="30.0" prefWidth="82.0" styleClass="signup-btn" stylesheets="@designLogin.css" text="Đăng Ký" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
